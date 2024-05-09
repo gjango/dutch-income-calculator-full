@@ -14,7 +14,9 @@ export class AppComponent implements OnInit {
   years = constants.years.reverse();
   hoursAmount = new FormControl(constants.defaultWorkingHours);
   income = new FormControl(60000);
-  startFrom = new FormControl<'Year' | 'Month' | 'Week' | 'Day' | 'Hour'> ('Year');
+  startFrom = new FormControl<'Year' | 'Month' | 'Week' | 'Day' | 'Hour'>(
+    'Year'
+  );
   ruling = new FormControl(false);
   rulingChoice = new FormControl('normal');
   allowance = new FormControl(false);
@@ -43,6 +45,7 @@ export class AppComponent implements OnInit {
       label: 'Monthly Gross Income',
       checked: false,
     },
+
     {
       name: 'grossWeek',
       sign: '',
@@ -187,18 +190,24 @@ export class AppComponent implements OnInit {
       // set screenWidth on screen size change
       this.screenWidth = window.innerWidth;
     };
-    
-    this.route.queryParams.subscribe(queryParams => {
-      //const params = route.snapshot.queryParams;
-      queryParams['income'] && this.income.setValue(Number(queryParams['income']));
-      queryParams['startFrom'] && this.startFrom.setValue(queryParams['startFrom']);
-      queryParams['selectedYear'] && this.selectedYear.setValue(queryParams['selectedYear']);
-      queryParams['older'] && this.older.setValue(queryParams['older'] === 'true');
-      queryParams['allowance'] && this.allowance.setValue(queryParams['allowance'] === 'true');
-      queryParams['hoursAmount'] && this.hoursAmount.setValue(queryParams['hoursAmount']);
-      queryParams['ruling'] && this.ruling.setValue(queryParams['ruling'] === 'true');
-    });
 
+    this.route.queryParams.subscribe((queryParams) => {
+      //const params = route.snapshot.queryParams;
+      queryParams['income'] &&
+        this.income.setValue(Number(queryParams['income']));
+      queryParams['startFrom'] &&
+        this.startFrom.setValue(queryParams['startFrom']);
+      queryParams['selectedYear'] &&
+        this.selectedYear.setValue(queryParams['selectedYear']);
+      queryParams['older'] &&
+        this.older.setValue(queryParams['older'] === 'true');
+      queryParams['allowance'] &&
+        this.allowance.setValue(queryParams['allowance'] === 'true');
+      queryParams['hoursAmount'] &&
+        this.hoursAmount.setValue(queryParams['hoursAmount']);
+      queryParams['ruling'] &&
+        this.ruling.setValue(queryParams['ruling'] === 'true');
+    });
 
     merge(
       this.income.valueChanges,
