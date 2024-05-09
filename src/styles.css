@@ -1,0 +1,130 @@
+body {
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+mat-card {
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 15px;
+}
+
+mat-drawer-container {
+  height: 100vh;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+
+.mat-mdc-checkbox.mat-primary {
+  max-height: 20px;
+}
+.mat-mdc-radio-button {
+  max-height: 35px;
+}
+
+
+
+.big-output {
+  font-size: x-large;
+}
+
+.list-style-type-none {
+    list-style-type: none;
+    margin-top: 4px;
+    padding-left: 5px;
+  }
+
+.description {
+    font-size: 75%;
+}
+
+
+
+.disclaimer {
+    font-size: 75%;
+}
+
+
+
+.ruling-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 0 15px;
+  align-items: flex-start;
+}
+
+td.report-value {
+  text-align: right;
+}
+
+.report-value-negative {
+  color: #FF3366;
+}
+
+.output-results-table {
+  width: 500px;
+}
+
+@media screen and (max-width: 900px) {
+  .output-results-table {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .github-link {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+  }
+
+  mat-form-field {
+    width: 40%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .github-link {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+  }
+}
+
+
+
+
+
+
+
+@media (min-width: 576px) {
+  mat-sidenav{
+    width: 60% !important;
+  }
+}
+@media (min-width: 768px) {
+  mat-sidenav{
+    width: 40% !important;
+  }
+}
+@media (min-width: 992px) {
+  mat-sidenav{
+    width: 30% !important;
+  }
+  
+}
+@media (min-width: 1200px) {
+  mat-sidenav{
+    width: 30% !important;
+  }
+}
