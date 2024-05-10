@@ -36,9 +36,10 @@ mat-card {
   padding: 15px;
 }
 
-mat-drawer-container {
+.mat-drawer-container {
   /* height: 100vh; */
   /* overflow: scroll; */
+  height: 120vh;
 }
 
 .spacer {
