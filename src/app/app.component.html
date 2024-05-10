@@ -1,30 +1,8 @@
-<mat-toolbar color="primary">
+<mat-toolbar style="background-color: #272727; color: white">
   <button mat-icon-button aria-label="menu icon" (click)="drawer.toggle()">
     <mat-icon>menu</mat-icon>
   </button>
-  <span title="makes your work easy">Dutch Income Tax Calculator</span>
-
-  <span class="spacer"></span>
-
-  <a
-    _ngcontent-vgy-c49=""
-    mat-button=""
-    href="https://github.com/stevermeister/dutch-tax-income-calculator"
-    aria-label="GitHub Repository"
-    class="github-link"
-    aria-disabled="false"
-    ><span class="mat-button-wrapper"
-      ><img
-        _ngcontent-vgy-c49=""
-        src="./assets/github-circle-white-transparent.svg"
-        alt="angular"
-        class="docs-angular-logo"
-      />
-      GitHub</span
-    >
-    <span matripple="" class="mat-ripple mat-button-ripple"></span
-    ><span class="mat-button-focus-overlay"></span
-  ></a>
+  <span title="makes your work easy">HollaHop Tax Calculator</span>
 </mat-toolbar>
 
 <mat-drawer-container class="container" autosize>
@@ -172,29 +150,4 @@
   </mat-card>
 
   <app-ruling [year]="selectedYear.getRawValue()"></app-ruling>
-
-  <mat-card class="description">
-    <mat-card-content>
-      <h2>Tax calculators worldwide</h2>
-      <p>
-        <a href="https://www.income-tax.co.uk/" rel="nofollow">UK</a>,
-        <a
-          href="https://visualsm.art/gross-net-salary-calculator/"
-          rel="nofollow"
-          >Germany</a
-        >, <a href="https://thetax.nl/">Netherlands</a>,
-        <a href="https://relocate.me/net-pay-calculators" rel="follow"
-          >All in One</a
-        >
-      </p>
-    </mat-card-content>
-  </mat-card>
-
-  <mat-card class="disclaimer">
-    <mat-card-content>
-      <b>Disclaimer:</b> this calculator is for illustrative purposes only. No
-      guarantee is made for the accuracy of the data provided. Consult a
-      qualified tax services professional before making any decision.
-    </mat-card-content>
-  </mat-card>
 </mat-drawer-container>
